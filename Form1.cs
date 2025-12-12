@@ -35,9 +35,43 @@ namespace ResponsiJunpro
                     "from developer d left join proyek p on d.id_proyek = p.id_proyek;", conn);
                 NpgsqlDataReader dr = cmd.ExecuteReader();
                 dataTable.Load(dr);
+                
+                // Tambahkan kolom skor
+                dataTable.Columns.Add("skor", typeof(double));
+                
+                // Hitung skor untuk setiap baris
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    string status = row["status_kontrak"].ToString().ToLower();
+                    int fitur = Convert.ToInt32(row["fitur_selesai"]);
+                    int bug = Convert.ToInt32(row["jumlah_bug"]);
+                    double skor = 0;
+                    
+                    if (status == "full time")
+                    {
+                        // Skor = 10 x fitur - 5 x bug
+                        skor = (10 * fitur) - (5 * bug);
+                    }
+                    else if (status == "freelance")
+                    {
+                        // Skor = 100 * (1 - (2 * bug) / (3 * fitur))
+                        if (fitur > 0) // Hindari pembagian dengan nol
+                        {
+                            skor = 100 * (1 - (2.0 * bug) / (3.0 * fitur));
+                        }
+                        else
+                        {
+                            skor = 0;
+                        }
+                    }
+                    
+                    row["skor"] = skor;
+                }
+                
                 dtgv.DataSource = dataTable;
                 dtgv.Columns["id_proyek"].Visible = false;
                 dtgv.Columns["id_proyek1"].Visible = false;
+                
             }
             catch { }
         }

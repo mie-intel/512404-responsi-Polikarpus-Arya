@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ResponsiJunpro")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+047dcb36596a5a2d851486c87f9b9503d6fd10ed")]
 [assembly: System.Reflection.AssemblyProductAttribute("ResponsiJunpro")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ResponsiJunpro")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

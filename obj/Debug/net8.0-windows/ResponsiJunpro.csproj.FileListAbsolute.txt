@@ -20,3 +20,4 @@ C:\SOSKOD\ResponsiJunpro\obj\Debug\net8.0-windows\refint\ResponsiJunpro.dll
 C:\SOSKOD\ResponsiJunpro\obj\Debug\net8.0-windows\ResponsiJunpro.pdb
 C:\SOSKOD\ResponsiJunpro\obj\Debug\net8.0-windows\ResponsiJunpro.genruntimeconfig.cache
 C:\SOSKOD\ResponsiJunpro\obj\Debug\net8.0-windows\ref\ResponsiJunpro.dll
+C:\SOSKOD\ResponsiJunpro\obj\Debug\net8.0-windows\ResponsiJunpro.sourcelink.json
